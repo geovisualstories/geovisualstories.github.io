@@ -1,9 +1,276 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Geospatial portfolio featuring GIS, cartography, spatial analysis, Python, and environmental data visualization."
+  />
+  <title>Emily Holt | GIS & Geospatial Portfolio</title>
+  <link rel="stylesheet" href="master.css" />
+</head>
 <body>
-  <h1>Emily Holt</h1>
-  <p>GIS • Cartography • Spatial Analysis • Data Visualization</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo">Emily Holt</a>
 
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">What I Do</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-in-up">
+          <p class="eyebrow">GIS • Cartography • Spatial Analysis • Data Visualization</p>
+          <h1>Maps and geospatial analysis that turn complex data into clear decisions.</h1>
+          <p class="hero-text">
+            I create cartography, spatial analysis, and data-driven visual storytelling
+            for environmental, energy, water, and land-focused projects.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+
+          <ul class="hero-highlights">
+            <li>GIS + cartographic design</li>
+            <li>Python + spatial workflows</li>
+            <li>Environmental + energy applications</li>
+          </ul>
+        </div>
+
+        <div class="hero-card fade-in-up delay-1">
+          <div class="hero-card-inner">
+            <p class="mini-label">Featured Focus</p>
+            <h2>Geospatial work that blends science, analysis, and visual communication.</h2>
+            <p>
+              From geothermal and groundwater mapping to environmental GIS analysis and
+              technical data visualization, I build work that is both rigorous and usable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-strip-inner">
+        <p>Tools & workflows</p>
+        <div class="trust-items">
+          <span>ArcGIS Pro</span>
+          <span>Python</span>
+          <span>Spatial Analysis</span>
+          <span>Cartography</span>
+          <span>Remote Sensing</span>
+          <span>Data Visualization</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Featured projects</h2>
+          <p>
+            A sample of projects across geospatial analysis, environmental data,
+            mapping, and scientific communication.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card fade-in-up">
+            <div class="project-image">
+              <img
+                src="images/project-1.jpg"
+                alt="Map or visualization for geothermal suitability mapping"
+              />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Geothermal • GIS • Suitability Analysis</p>
+              <h3>Geothermal Suitability Mapping</h3>
+              <p>
+                Spatial modeling and geospatial analysis for understanding geothermal
+                potential, uncertainty, and development context.
+              </p>
+              <p class="project-tools">ArcGIS Pro • Python • Raster Analysis</p>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-up delay-1">
+            <div class="project-image">
+              <img
+                src="images/project-2.jpg"
+                alt="Groundwater map or hydrology visualization"
+              />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Hydrology • Mapping • Field Support</p>
+              <h3>Groundwater & Hydrologic Mapping</h3>
+              <p>
+                GIS workflows and map products for groundwater elevation, surface
+                interpretation, and decision support.
+              </p>
+              <p class="project-tools">ArcGIS Pro • CSV/Spatial Data • Cartography</p>
+            </div>
+          </article>
+
+          <article class="project-card fade-in-up delay-2">
+            <div class="project-image">
+              <img
+                src="images/project-3.jpg"
+                alt="Environmental data dashboard or visualization"
+              />
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Data Visualization • Python • Storytelling</p>
+              <h3>Environmental Data Visualization</h3>
+              <p>
+                Visual communication of technical datasets through clean graphics,
+                maps, and spatial narratives built for clarity and impact.
+              </p>
+              <p class="project-tools">Python • GIS • Visual Design</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What I Do</p>
+          <h2>Services & capabilities</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="info-card fade-in-up">
+            <h3>Cartography</h3>
+            <p>
+              Polished static and digital maps designed for reports, presentations,
+              field use, and portfolio-quality communication.
+            </p>
+          </article>
+
+          <article class="info-card fade-in-up delay-1">
+            <h3>GIS Analysis</h3>
+            <p>
+              Spatial problem solving for environmental, hydrologic, land-use, and
+              energy-related questions.
+            </p>
+          </article>
+
+          <article class="info-card fade-in-up delay-2">
+            <h3>Python Workflows</h3>
+            <p>
+              Data processing, automation, and reproducible workflows for geospatial
+              and scientific datasets.
+            </p>
+          </article>
+
+          <article class="info-card fade-in-up">
+            <h3>Data Visualization</h3>
+            <p>
+              Clear, compelling visuals that make technical information easier to
+              understand and act on.
+            </p>
+          </article>
+
+          <article class="info-card fade-in-up delay-1">
+            <h3>Environmental Applications</h3>
+            <p>
+              Experience across geothermal, groundwater, and broader environmental
+              and earth science topics.
+            </p>
+          </article>
+
+          <article class="info-card fade-in-up delay-2">
+            <h3>Science Communication</h3>
+            <p>
+              Translating complex analysis into visuals and narratives that work for
+              both technical and non-technical audiences.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>Geospatial analysis with a science-first foundation</h2>
+          <p>
+            I’m a geospatial professional with a background in geology, GIS, and data
+            science. My work sits at the intersection of spatial analysis, cartographic
+            design, and technical communication.
+          </p>
+          <p>
+            I’m especially interested in projects involving energy, water, environment,
+            and land systems—where strong analysis and strong visuals both matter.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <h3>Background snapshot</h3>
+          <ul class="about-list">
+            <li>M.S. in Data Science</li>
+            <li>GIS graduate certificate</li>
+            <li>B.S. in Geology with Watershed Science minor</li>
+            <li>Experience in geothermal and geospatial analysis</li>
+            <li>Interest in design-forward mapping and visual storytelling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s build something useful.</h2>
+        <p>
+          Looking for support with GIS, mapping, cartography, or geospatial data
+          visualization? Reach out and say hello.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:youremail@example.com" class="btn btn-primary">Email Me</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-link">GitHub</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="text-link">Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name</p>
+      <p>Built with HTML, CSS, and JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
