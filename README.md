@@ -42,3 +42,20 @@ The goal is to present technical work in a way that is both rigorous and visuall
 ---
 
 ## Project Structure
+
+geovisualstories.github.io/
+├── index.html
+├── master.css
+├── main.js
+├── images/
+└── assets/
+
+---
+
+## Running Locally
+
+Clone the repository and open `index.html` in your browser:
+
+```bash
+git clone https://github.com/geovisualstories/geovisualstories.github.io.git
+cd geovisualstories.github.io
