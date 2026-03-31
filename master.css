@@ -395,7 +395,7 @@ a {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-columns: 0.9fr 1.3fr 1fr;
   gap: 1.6rem;
   align-items: start;
 }
@@ -405,6 +405,8 @@ a {
   overflow: hidden;
   box-shadow: var(--shadow);
   aspect-ratio: 4 / 5;
+  max-width: 320px;
+  align-self: start;
 }
 
 .about-image img {
@@ -426,6 +428,7 @@ a {
 
 .about-panel {
   padding: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .about-panel h3 {
