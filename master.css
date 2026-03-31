@@ -118,8 +118,11 @@ a {
 .hero {
   padding: 5.5rem 0 4rem;
   background:
-    radial-gradient(circle at top right, rgba(131, 197, 190, 0.25), transparent 30%),
-    linear-gradient(180deg, var(--light) 0%, var(--white) 100%);
+    linear-gradient(rgba(237, 246, 249, 0.88), rgba(255, 255, 255, 0.92)),
+    url("images/topography.png");
+  background-size: 900px;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 .hero-grid {
