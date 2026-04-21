@@ -376,6 +376,18 @@ a {
   font-size: 0.95rem;
 }
 
+.subsection-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--teal-dark);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
