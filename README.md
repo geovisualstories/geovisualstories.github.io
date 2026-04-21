@@ -30,6 +30,10 @@ The goal is to present technical work in a way that is both rigorous and visuall
 - **Environmental Data Visualization**  
   Python-based visualizations for communicating complex datasets.
 
+## Artistic Maps
+- **Boulder Skyline Traverse Trail Map**
+- **Custom Adventure Racing Trail Maps**
+- **Custom Trail Maps**
 ---
 
 ## Tech Stack
