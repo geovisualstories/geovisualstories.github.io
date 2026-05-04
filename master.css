@@ -1,44 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* ── Terrain & Science palette (60/30/10) ──────────────────
-     60%  Slate blue-gray  #3d5a6c  → backgrounds, nav, hero
-     30%  Warm sand        #c9a87c  → secondary surfaces, cards
-     10%  Moss green       #4a7c59  → CTAs, accents, highlights
-  ─────────────────────────────────────────────────────────── */
-
-  /* 60% — dominant: warm slate base */
-  --slate:       #3d5a6c;   /* primary brand color */
-  --slate-dark:  #2b3f4d;   /* darker for hover states */
-  --slate-light: #f0ece6;   /* page background tint */
-
-  /* 30% — secondary: warm sand */
-  --sand:        #c9a87c;   /* secondary accents, borders */
-  --sand-light:  #f5efe5;   /* card surfaces, alt sections */
-  --sand-pale:   #fdf9f4;   /* hero card, lightest surface */
-
-  /* 10% — accent: moss green */
-  --moss:        #4a7c59;   /* CTAs, links, highlights */
-  --moss-dark:   #375e43;   /* hover on green elements */
-  --moss-light:  #ddeedd;   /* light accent tint */
-
-  /* Neutrals */
-  --white:  #ffffff;
-  --text:   #1e2c35;        /* near-black with slate undertone */
-  --muted:  #5a6b74;        /* body copy, secondary text */
-  --border: rgba(61, 90, 108, 0.12);  /* slate-tinted border */
-  --shadow: 0 14px 40px rgba(30, 44, 53, 0.09);
-
-  /* Legacy aliases — keep so every existing reference still works */
-  --teal-dark:   var(--slate);
-  --teal-mid:    #7a9aaa;
-  --light:       var(--slate-light);
-  --peach-dark:  var(--moss);
-  --peach-light: var(--moss-light);
-
-  --radius:     22px;
-  --max-width:  1160px;
-  --transition: 220ms ease;
+  --teal-dark:   #006d77;
+  --teal-mid:    #83c5be;
+  --light:       #edf6f9;
+  --peach-light: #ffddd2;
+  --peach-dark:  #e29578;
+  --white:       #ffffff;
+  --text:        #1f2933;
+  --muted:       #5b6870;
+  --border:      rgba(0, 0, 0, 0.08);
+  --shadow:      0 14px 40px rgba(0, 0, 0, 0.08);
+  --radius:      22px;
+  --max-width:   1160px;
+  --transition:  220ms ease;
 
   /* Typography */
   --font-display: 'DM Serif Display', Georgia, serif;
@@ -92,7 +67,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(240, 236, 230, 0.94);
+  background: rgba(237, 246, 249, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -167,7 +142,7 @@ a {
 .hero {
   padding: 5.5rem 0 4rem;
   background:
-    linear-gradient(rgba(240, 236, 230, 0.82), rgba(253, 249, 244, 0.93)),
+    linear-gradient(rgba(237, 246, 249, 0.8), rgba(255, 255, 255, 0.9)),
     url("images/topo_image.png");
   background-size: cover;
   background-position: center;
@@ -246,7 +221,7 @@ a {
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: var(--slate-dark);
+  background: #005761;
 }
 
 .btn-secondary {
@@ -274,7 +249,7 @@ a {
 }
 
 .hero-card {
-  background: linear-gradient(180deg, var(--sand-pale), var(--sand-light));
+  background: linear-gradient(180deg, var(--white), #f9fbfb);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -358,7 +333,7 @@ a {
 }
 
 .section-alt {
-  background: linear-gradient(180deg, var(--sand-light), var(--sand-pale));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.95));
 }
 
 .section-header {
@@ -415,7 +390,7 @@ a {
 .project-image {
   position: relative;
   overflow: hidden;
-  background: #c8d8e0;
+  background: #d7e8e8;
   /* No aspect-ratio, no fixed height — image shows fully */
 }
 
@@ -430,7 +405,7 @@ a {
 .project-image-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(61, 90, 108, 0.72);
+  background: rgba(0, 109, 119, 0.72);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -624,7 +599,7 @@ a {
   padding: 2.2rem;
   text-align: center;
   background:
-    radial-gradient(circle at top left, rgba(212, 230, 208, 0.55), transparent 35%),
+    radial-gradient(circle at top left, rgba(255, 221, 210, 0.5), transparent 35%),
     var(--white);
 }
 
@@ -704,7 +679,7 @@ a {
 .lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(18, 30, 38, 0.9);
+  background: rgba(15, 30, 35, 0.88);
   cursor: pointer;
 }
 
@@ -770,7 +745,7 @@ a {
 }
 
 .lightbox-close:hover {
-  background: var(--sand-light);
+  background: var(--light);
   transform: scale(1.08);
 }
 
