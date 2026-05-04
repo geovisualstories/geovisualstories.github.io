@@ -12,6 +12,10 @@
   --radius: 22px;
   --max-width: 1160px;
   --transition: 220ms ease;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -24,10 +28,18 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   color: var(--text);
   background: var(--light);
   line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ── Display font on all headings ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400; /* DM Serif Display is naturally bold at regular weight */
 }
 
 img {
@@ -44,6 +56,10 @@ a {
   width: min(100% - 2rem, var(--max-width));
   margin: 0 auto;
 }
+
+/* ─────────────────────────────────────
+   HEADER & NAV
+───────────────────────────────────── */
 
 .site-header {
   position: sticky;
@@ -64,10 +80,11 @@ a {
 
 .logo {
   text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
   color: var(--teal-dark);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .nav-menu {
@@ -81,9 +98,10 @@ a {
 
 .nav-menu a {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
   transition: color var(--transition);
+  font-size: 0.95rem;
 }
 
 .nav-menu a:hover,
@@ -115,6 +133,10 @@ a {
   margin: 5px 0;
 }
 
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+
 .hero {
   padding: 5.5rem 0 4rem;
   background:
@@ -136,17 +158,20 @@ a {
   margin: 0 0 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-weight: 800;
-  font-size: 0.78rem;
+  font-weight: 700;
+  font-size: 0.75rem;
   color: var(--teal-dark);
+  font-family: var(--font-body);
 }
 
 .hero h1 {
   margin: 0;
   font-size: clamp(2.8rem, 5vw, 5.3rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  max-width: 11ch;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 12ch;
+  font-family: var(--font-display);
+  font-weight: 400;
 }
 
 .hero-text {
@@ -154,6 +179,7 @@ a {
   margin: 1.25rem 0 0;
   font-size: 1.08rem;
   color: var(--muted);
+  font-weight: 300;
 }
 
 .hero-actions {
@@ -168,10 +194,12 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0.9rem 1.25rem;
+  padding: 0.9rem 1.4rem;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
   transition:
     transform var(--transition),
     background var(--transition),
@@ -208,7 +236,8 @@ a {
   margin: 2rem 0 0;
   list-style: none;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .hero-highlights li::before {
@@ -231,23 +260,29 @@ a {
 
 .mini-label {
   margin: 0 0 0.8rem;
-  font-size: 0.82rem;
-  font-weight: 800;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--peach-dark);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  font-family: var(--font-body);
 }
 
 .hero-card h2 {
   margin: 0 0 1rem;
-  font-size: 1.7rem;
-  line-height: 1.15;
+  font-size: 1.6rem;
+  line-height: 1.2;
 }
 
 .hero-card p:last-child {
   margin-bottom: 0;
   color: var(--muted);
+  font-weight: 300;
 }
+
+/* ─────────────────────────────────────
+   TRUST STRIP
+───────────────────────────────────── */
 
 .trust-strip {
   padding: 1rem 0;
@@ -265,8 +300,11 @@ a {
 
 .trust-strip-inner > p {
   margin: 0;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--teal-dark);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .trust-items {
@@ -280,9 +318,13 @@ a {
   border-radius: 999px;
   background: var(--light);
   border: 1px solid var(--border);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
+
+/* ─────────────────────────────────────
+   SECTIONS
+───────────────────────────────────── */
 
 .section {
   padding: 5.5rem 0;
@@ -306,7 +348,12 @@ a {
 .section-header p:last-child {
   color: var(--muted);
   margin-top: 0.9rem;
+  font-weight: 300;
 }
+
+/* ─────────────────────────────────────
+   PROJECT CARDS
+───────────────────────────────────── */
 
 .project-grid {
   display: grid;
@@ -314,37 +361,83 @@ a {
   gap: 1.4rem;
 }
 
-.project-card,
-.info-card,
-.about-panel,
-.contact-card {
+.project-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-}
-
-.project-card {
   overflow: hidden;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .project-card:hover,
 .project-card:focus-within {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.13);
 }
 
+/* Image link wrapper — fills the card top */
+.project-image-link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  /* no fixed aspect-ratio here — image determines height */
+}
+
+/* Image container: full image, no crop */
 .project-image {
-  aspect-ratio: 16 / 10;
+  position: relative;
   overflow: hidden;
   background: #d7e8e8;
+  /* No aspect-ratio, no fixed height — image shows fully */
 }
 
 .project-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;          /* full image, never cropped */
+  display: block;
+  transition: transform 380ms ease, filter 380ms ease;
+}
+
+/* Hover overlay */
+.project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 109, 119, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+.overlay-icon {
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1;
+}
+
+.overlay-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* Trigger overlay + subtle zoom on hover */
+.project-image-link:hover .project-image-overlay,
+.project-image-link:focus-visible .project-image-overlay {
+  opacity: 1;
+}
+
+.project-image-link:hover .project-image img,
+.project-image-link:focus-visible .project-image img {
+  transform: scale(1.03);
+  filter: brightness(0.9);
 }
 
 .project-body {
@@ -353,40 +446,51 @@ a {
 
 .project-tag {
   margin: 0 0 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--peach-dark);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  font-family: var(--font-body);
 }
 
 .project-card h3 {
   margin: 0 0 0.75rem;
   line-height: 1.2;
+  font-size: 1.15rem;
 }
 
 .project-card p {
   margin-top: 0;
+  font-weight: 300;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .project-tools {
   margin-bottom: 0;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--teal-dark);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
 }
 
 .subsection-label {
-  font-size: 0.78rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--teal-dark);
   margin-top: 3rem;
   margin-bottom: 1.25rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border);
 }
+
+/* ─────────────────────────────────────
+   SERVICES
+───────────────────────────────────── */
 
 .services-grid {
   display: grid;
@@ -395,18 +499,28 @@ a {
 }
 
 .info-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 1.5rem;
 }
 
 .info-card h3 {
   margin-top: 0;
   margin-bottom: 0.7rem;
+  font-size: 1.1rem;
 }
 
 .info-card p {
   margin-bottom: 0;
   color: var(--muted);
+  font-weight: 300;
 }
+
+/* ─────────────────────────────────────
+   ABOUT
+───────────────────────────────────── */
 
 .about-grid {
   display: grid;
@@ -439,31 +553,47 @@ a {
 .about-copy p {
   max-width: 62ch;
   color: var(--muted);
+  font-weight: 300;
 }
 
 .about-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 1.5rem;
   margin-top: 0.5rem;
 }
 
 .about-panel h3 {
   margin-top: 0;
+  font-size: 1.05rem;
 }
 
 .about-list {
   margin: 0;
   padding-left: 1.15rem;
+  font-weight: 300;
+  color: var(--muted);
 }
 
 .about-list li + li {
   margin-top: 0.6rem;
 }
 
+/* ─────────────────────────────────────
+   CONTACT
+───────────────────────────────────── */
+
 .contact-section {
   padding-top: 2rem;
 }
 
 .contact-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 2.2rem;
   text-align: center;
   background:
@@ -482,6 +612,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   color: var(--muted);
+  font-weight: 300;
 }
 
 .contact-links {
@@ -493,7 +624,7 @@ a {
 }
 
 .text-link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--teal-dark);
   text-decoration: none;
 }
@@ -502,6 +633,10 @@ a {
 .text-link:focus-visible {
   text-decoration: underline;
 }
+
+/* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────── */
 
 .site-footer {
   padding: 1.25rem 0 2rem;
@@ -513,8 +648,108 @@ a {
   gap: 1rem;
   flex-wrap: wrap;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
+
+/* ─────────────────────────────────────
+   LIGHTBOX
+───────────────────────────────────── */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 30, 35, 0.88);
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 1;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transform: scale(0.95);
+  transition: transform 300ms ease;
+}
+
+.lightbox.open .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: background var(--transition), transform var(--transition);
+  /* position relative to lightbox-content */
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.lightbox-close:hover {
+  background: var(--light);
+  transform: scale(1.08);
+}
+
+/* ─────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────── */
 
 .fade-in-up {
   opacity: 0;
@@ -536,6 +771,10 @@ a {
 .delay-2 {
   transition-delay: 240ms;
 }
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
 
 @media (max-width: 960px) {
   .hero-grid,
@@ -601,6 +840,10 @@ a {
 
   .contact-card {
     padding: 1.6rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 }
 
