@@ -32,8 +32,8 @@ The goal is to present technical work in a way that is both rigorous and visuall
 
 ## Artistic Maps
 - **Boulder Skyline Traverse Trail Map**
-- **Custom Adventure Racing Trail Maps**
-- **Custom Trail Maps**
+- **Custom Hiking Trail Maps**
+- **Topographic Maps**
 ---
 
 ## Tech Stack
