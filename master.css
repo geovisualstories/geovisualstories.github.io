@@ -361,7 +361,6 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
-  align-items: start;
 }
 
 .project-card {
@@ -397,10 +396,11 @@ a {
 
 .project-image img {
   width: 100%;
-  height: auto;
-  max-height: 380px;
+  height: 300px;
   object-fit: contain;
+  object-position: top;
   display: block;
+  background: #f8f8f8;
 }
 
 /* Hover overlay */
