@@ -396,11 +396,9 @@ a {
 
 .project-image img {
   width: 100%;
-  height: 300px;
-  object-fit: contain;
-  object-position: top;
+  height: auto;          /* full image, never cropped */
   display: block;
-  background: #f8f8f8;
+  transition: transform 380ms ease, filter 380ms ease;
 }
 
 /* Hover overlay */
