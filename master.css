@@ -386,17 +386,19 @@ a {
   /* no fixed aspect-ratio here — image determines height */
 }
 
-/* Image container: full image, no crop */
+/* Image container: fixed height so all cards stay consistent */
 .project-image {
   position: relative;
   overflow: hidden;
   background: #d7e8e8;
-  /* No aspect-ratio, no fixed height — image shows fully */
+  height: 260px;
 }
 
 .project-image img {
   width: 100%;
-  height: auto;          /* full image, never cropped */
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   transition: transform 380ms ease, filter 380ms ease;
 }
