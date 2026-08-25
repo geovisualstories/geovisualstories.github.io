@@ -481,6 +481,15 @@ a {
   font-family: var(--font-body);
 }
 
+.project-sources {
+  margin-bottom: 0;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
 .subsection-label {
   font-family: var(--font-body);
   font-size: 0.75rem;
