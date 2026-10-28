@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --teal-dark:   #006d77;
@@ -16,8 +16,8 @@
   --transition:  220ms ease;
 
   /* Typography */
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body:    'Outfit', Arial, Helvetica, sans-serif;
+  --font-display: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  --font-body:    'Nunito Sans', Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
 /* ── Display font on all headings ── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400; /* DM Serif Display is naturally bold at regular weight */
+  font-weight: 700;
 }
 
 img {
@@ -140,20 +140,83 @@ a {
 ───────────────────────────────────── */
 
 .hero {
-  padding: 5.5rem 0 4rem;
-  background:
-    linear-gradient(rgba(237, 246, 249, 0.8), rgba(255, 255, 255, 0.9)),
-    url("images/topo_image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  isolation: isolate; /* keeps the ::before overlay between the photo and the text */
+  min-height: 90vh;
+  min-height: 90svh;
+  display: flex;
+  align-items: flex-end; /* text sits in the lower part of the hero */
+  padding: 6rem 0 4.5rem;
+  color: var(--white);
+  background: #1f2933 url("images/Seigal-0392.jpg") center center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* Dark overlay for text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.55) 100%);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: end;
+}
+
+.hero-photo-credit {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-photo-credit a:hover,
+.hero-photo-credit a:focus-visible {
+  color: var(--white);
+}
+
+/* Lower right, so the hiker in the lower left of the photo stays visible */
+.hero-copy {
+  justify-self: end;
+  max-width: 36rem;
+}
+
+.hero .eyebrow {
+  color: rgba(180, 225, 230, 0.9);
+}
+
+.hero .btn-primary {
+  background: var(--white);
+  color: var(--teal-dark);
+}
+
+.hero .btn-primary:hover,
+.hero .btn-primary:focus-visible {
+  background: var(--light);
+}
+
+.hero .btn-secondary {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.hero .btn-secondary:hover,
+.hero .btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .eyebrow {
@@ -168,19 +231,20 @@ a {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 5vw, 5.3rem);
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
   max-width: 12ch;
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
+  color: var(--white);
 }
 
 .hero-text {
   max-width: 58ch;
   margin: 1.25rem 0 0;
   font-size: 1.08rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
 }
 
@@ -237,7 +301,7 @@ a {
   padding: 0;
   margin: 2rem 0 0;
   list-style: none;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   font-size: 0.95rem;
 }
@@ -249,6 +313,7 @@ a {
 }
 
 .hero-card {
+  display: none; /* hidden in the full-bleed photo hero */
   background: linear-gradient(180deg, var(--white), #f9fbfb);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -886,10 +951,11 @@ a {
 
   .hero {
     padding-top: 4.5rem;
+    background-position: 20% center; /* keep the hiker in frame on narrow screens */
   }
 
   .hero h1 {
-    font-size: clamp(2.4rem, 10vw, 4rem);
+    font-size: clamp(2.1rem, 8.5vw, 3.4rem);
   }
 
   .section {
