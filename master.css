@@ -180,17 +180,6 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.hero-photo-credit a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.hero-photo-credit a:hover,
-.hero-photo-credit a:focus-visible {
-  color: var(--white);
-}
-
 /* Lower right, so the hiker in the lower left of the photo stays visible */
 .hero-copy {
   justify-self: end;
