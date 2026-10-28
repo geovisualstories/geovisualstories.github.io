@@ -145,7 +145,8 @@ a {
   min-height: 90vh;
   min-height: 90svh;
   display: flex;
-  align-items: flex-end; /* text sits in the lower part of the hero */
+  align-items: flex-start; /* text sits in the upper part of the hero */
+  justify-content: flex-start;
   padding: 6rem 0 4.5rem;
   color: var(--white);
   background: #1f2933 url("images/Seigal-0392.jpg") center center / cover no-repeat;
@@ -166,6 +167,7 @@ a {
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: end;
+  padding-top: 8rem;
 }
 
 .hero-photo-credit {
