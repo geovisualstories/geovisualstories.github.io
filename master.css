@@ -686,9 +686,6 @@ a {
   box-shadow: var(--shadow);
   padding: 2.2rem;
   text-align: center;
-  background:
-    radial-gradient(circle at top left, rgba(255, 221, 210, 0.5), transparent 35%),
-    var(--white);
 }
 
 .contact-card h2 {
