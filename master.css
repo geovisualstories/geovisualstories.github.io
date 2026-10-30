@@ -502,6 +502,25 @@ a {
   filter: brightness(0.9);
 }
 
+/* Work-in-progress card: blurred preview, no lightbox */
+.project-card--in-development .project-image img {
+  filter: blur(8px);
+  transform: scale(1.05); /* hide the soft blurred edge */
+}
+
+.project-card .in-development-label {
+  margin: 0;
+  padding: 0.6rem 1.35rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--peach-dark);
+}
+
 .project-body {
   padding: 1.35rem;
 }
